@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
+import { useContext } from 'react';
 
 export const StoreContext = createContext(null);
 
@@ -7,7 +8,7 @@ const StoreContextProvider = (prop) => {
     const [cartItems, setCarItems] = useState({})
 
     const addToCart = (itemId) => {
-        if (cartItems[itemId]) {
+        if (!cartItems[itemId]) {
             setCarItems((prev) => ({ ...prev, [itemId]: 1 }))
         }
         else {

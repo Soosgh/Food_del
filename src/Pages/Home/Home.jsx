@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '../../Component/Header/Header';
 import ExploreMenu from '../../Component/ExploreMenu/ExploreMenu';
 import FoodDisplay from '../../Component/FoodDisplay/FoodDisplay';
+import AppDownload from '../../Component/AppDownload/AppDownload';
 
 
 const Home = () => {
@@ -12,7 +13,8 @@ const Home = () => {
 
             <Header />
             <ExploreMenu category={category} setCategory={setCategory} />
-            <FoodDisplay category={category} />Z
+            <FoodDisplay category={category} />
+            <AppDownload />
         </div>
     );
 };
